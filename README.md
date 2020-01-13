@@ -22,9 +22,11 @@ My chakras are balanced.
 
 I am filled with orgasmic bliss.
 
-Places on fire have just enough rains to put them out.
+Australian bushfires have just enough torrential rains to put them out.
 
 Feel free to play around with this software, and add to the project if you are able.
+
+There are no guarantees. Though this program produces a strong energy field, and can produce profound bliss.
 
 Thank You.
 
