@@ -10,7 +10,7 @@ So Intensity of 1 would be one iteration per second. Intensity of 7 would be 1 m
 depending on the hardware. If your hardware can't do 10 million iterations per second, then
 Intensity of 8 would be full power after one million iterations per second.
 
-Start with an Intensity of 5.
+Start with an Intensity of 5 and give it 15 mins at least.
 
 Sample intentions are:
 
