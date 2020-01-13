@@ -13,9 +13,13 @@ Intensity of 8 would be full power after one million iterations per second.
 Sample intentions are:
 
 My heart is filled with Love.
+
 I am calm and confident.
+
 My dogs are healed.
+
 My chakras are balanced.
+
 I am filled with orgasmic bliss.
 
 Feel free to play around with this software, and add to the project if you are able.
