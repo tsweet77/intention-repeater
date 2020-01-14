@@ -28,7 +28,7 @@ The Australian bushfires have just enough euphoric rains to put them out.
 
 Picture1.jpg is perfectly and euphorically healed.
 
-Sample_intentions.txt
+sample_intentions.txt
 
 That last one allows images to be used just from the name of the file, if it is in the same folder as the .py file.
 Just substitute with the name of your image.
