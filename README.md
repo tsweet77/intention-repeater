@@ -24,7 +24,7 @@ My chakras are balanced.
 
 I am filled with orgasmic bliss.
 
-Australian bushfires have just enough torrential rains to put them out.
+The Australian bushfires have just enough euphoric rains to put them out.
 
 Feel free to play around with this software, and add to the project if you are able.
 
