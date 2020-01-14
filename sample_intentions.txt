@@ -8,3 +8,5 @@ My third eye is open, balanced and full of bliss.
 My crown chakra is open, balanced and full of bliss.
 I am blisfully open to cosmic consciousness.
 I am in orgasmic, blissful Unity with God.
+
+picture1.jpg is healed. <- This one works if the image is in the same folder as the .py file. Just type the name of the image.
