@@ -26,6 +26,10 @@ I am filled with orgasmic bliss.
 
 The Australian bushfires have just enough euphoric rains to put them out.
 
+Picture1.jpg is healed.
+
+That last one allows images to be used just from the name of the file, if it is in the same folder as the .py file.
+
 Feel free to play around with this software, and add to the project if you are able.
 
 There are no guarantees. Though this program produces a strong energy field, and can produce profound bliss.
