@@ -39,6 +39,6 @@ There are no guarantees. Though this program produces a strong energy field, and
 
 Thank You.
 
-Run using python3.
+Run using python3 intention_repeater.py
 
 - tsweet77
