@@ -29,6 +29,7 @@ The Australian bushfires have just enough euphoric rains to put them out.
 Picture1.jpg is healed.
 
 That last one allows images to be used just from the name of the file, if it is in the same folder as the .py file.
+Just substitute with the name of your image.
 
 Feel free to play around with this software, and add to the project if you are able.
 
