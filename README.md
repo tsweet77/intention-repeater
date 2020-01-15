@@ -39,7 +39,7 @@ There are no guarantees. Though this program produces a strong energy field, and
 
 Thank You.
 
-Run using python3 intention_repeater.py
+Run from terminal or command line using: python3 intention_repeater.py
 
 You will need minimum version 3.5.3 of Python.
 
