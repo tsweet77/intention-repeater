@@ -41,4 +41,6 @@ Thank You.
 
 Run using python3 intention_repeater.py
 
+You will need minimum version 3.5.3 of Python.
+
 - tsweet77
