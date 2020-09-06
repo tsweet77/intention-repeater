@@ -1,8 +1,10 @@
 #Intention Repeater created by Thomas Sweet
-#Updated 1/12/2020
+#Updated 9/6/2020
 #Repeats intention a million or more times per second
 #Depending on the intensity chosen and the hardware capability.
 #Python script. Run using: python3 intention_repeater.py
+#Licensed under GNU General Public License v3.0
+#https://choosealicense.com/licenses/gpl-3.0/
 
 import time
 from math import ceil, log10
@@ -14,25 +16,67 @@ def human_format(num):
     while abs(num) >= 1000:
         magnitude += 1
         num /= 1000.0
-    return '{}{}'.format('{:f}'.format(num).rstrip('0').rstrip('.'), ['', 'K', 'M', 'B', 'T', 'P'][magnitude])
+    return '{}{}'.format('{:f}'.format(num).rstrip('0').rstrip('.'), ['', 'K', 'M', 'B', 'T', 'Q'][magnitude])
 
-print("Intention Repeater v0.5 software created by Thomas Sweet.\n")
+print("Intention Repeater v5 software created by Thomas Sweet.\n")
 print("This software comes with no guarantees or warranty of any kind.\n")
+
+args = list(sys.argv)
+
+try:
+  params = str.upper(args[1])
+  gutheartmindcoherenceparam = str.upper(params[0])
+  clearinterferenceparam = params[1]
+  intensityparam = params[2]
+  filenameparam = str(args[2])
+except:
+  params = ''
+  gutheartmindcoherenceparam = ''
+  clearinterferenceparam = ''
+  intensityparam = ''
+  filenameparam = ''
 
 list_write = []
 
 intention = ''
 intentionval = ''
+coherence = ''
+clear_interference = ''
 
-while intention == '':
-        intention = input("What is your intent? [Or filename of TXT file]: ")
+if filenameparam == '':
+    while intention == '':
+        intention = input("What is your intent?: ")
+else:
+    intention = filenameparam
+
+if gutheartmindcoherenceparam == '':
+    while coherence != 'Y' and coherence != 'N':
+        coherence = str.upper(input("Gut/Heart/Mind Coherence? [Stronger, but can be exhausting] (Y/N): "))
+else:
+    coherence = gutheartmindcoherenceparam
+
+if clearinterferenceparam == '':
+    while clear_interference != 'Y' and clear_interference != 'N':
+            clear_interference = str.upper(input("Clear Interference? [More effective, but can be exhausting] (Y/N): "))
+else:
+    clear_interference = clearinterferenceparam
 
 intensity = ''
 
 #We want to cancel negative intentions. Regulate energy so that it doesn't get overpowering.
 #Choose the most effective and efficient path. And conclude with it is done on each iteration.
-process_energy_statement = 'CANCEL NEGATIVE INTENTIONS. PURIFY THE ENERGY. CLEAR THE BLOCKAGES. REGULATE THE ENERGY. BALANCE THE ENERGY. USE THE MOST EFFICIENT PATH. INTEGRATE THE ENERGY. PROCESS THE CHANGES. IT IS DONE.'
+process_energy_statement = 'BY GRACE. IN COOPERATION WITH FATHER GOD AND MOTHER GODDESS AND SOURCE. PURE ADAMANTINE PARTICLES OF LOVE/LIGHT. IN THE HIGHEST AND GREATEST GOOD OF ALL. REQUESTING AID FROM ALL BENEVOLENT BEINGS WHO ARE WILLING TO ASSIST. METATRON’‘S CUBE. 0010110. GREAT CENTRAL SUN. SIRIUS A. SOL. EARTH’‘S CRYSTAL GRID. CREATE STABILIZATION FIELD. CREATE ZONE OF MANIFESTATION. MANIFESTATION DIODE ARRAYS. BUBBLES. USE EVERY AVAILABLE RESOURCE (RESPECTING FREE WILL). MANIFEST ASAP AT HIGHEST DENSITY POSSIBLE INTO BEST DENSTIY FOR USER. CREATE STRUCTURE. 432HZ MANIFESTATION. CANCEL NEGATIVE INTENTIONS. PURIFY THE ENERGY. CLEAR THE BLOCKAGES. REGULATE AND BALANCE THE ENERGY. USE THE MOST EFFECTIVE PATH IN THE MOST EFFICIENT WAY. INTEGRATE THE ENERGY. PROCESS THE CHANGES. GROUNDED TO GAIA, CONNECTED TO SOURCE, INTEGRATING BOTH WITHIN THE SACRED HEART. IT IS DONE. SO SHALL IT BE. NOW RETURN A PORTION OF THE LOVE/LIGHT RECEIVED AND ACTIVATED BACK INTO THE HIGHER REALMS OF CREATION. I LOVE YOU AND THANK YOU.'
+
 intentionval += intention + ' ' + process_energy_statement
+
+if coherence == 'Y':
+    intentionval += ' GUT/HEART/MIND COHERENCE WITH REPEATER.'
+
+if clear_interference == 'Y':
+    intentionval += ' CLEAR INTERFERENCE.'
+
+#This makes a huge difference
+intentionval += 'OM'
 
 benchmark = 0
 start_time = float(time.time())
@@ -48,12 +92,15 @@ list_write.clear()
 #Add 1 for any partial million or 100k left over.
 maxintensitylevel = ceil(log10(benchmark)) + 1
 
-while intensity is not int:
-    try:
-        intensity = int(input("Intensity [1-" + str(maxintensitylevel) + "]: "))
-        break
-    except ValueError:
-        print("Please enter a valid intensity value.")
+if intensityparam == '':
+    while intensity is not int:
+        try:
+            intensity = int(input("Intensity [1-" + str(maxintensitylevel) + "]: "))
+            break
+        except ValueError:
+            print("Please enter a valid intensity value.")
+else:
+    intensity = int(intensityparam)
 
 if intensity > maxintensitylevel:
     intensity = maxintensitylevel
@@ -92,7 +139,7 @@ try:
             list_write.append(intentionval)
             num_writes += 1
             if num_writes % maxintensity == 0:
-                sys.stdout.write(time.strftime('%H:%M:%S', time.gmtime(int(num_writes/maxintensity))) + " [" + human_format(num_writes) + "] " + intention + '   \r')
+                sys.stdout.write('  ' + time.strftime('%H:%M:%S', time.gmtime(int(num_writes/maxintensity))) + " [" + human_format(num_writes) + "] " + intention + '   \r')
                 sys.stdout.flush()
                 list_write.clear()
         if sleeptime > 0:
