@@ -5,6 +5,8 @@ in computer memory. When you repeat things, it programs the Quantum Field to aff
 
 I placed this into open source in order that it might be developed and improved upon.
 
+Instructions for automating in v5.1+ are at: https://www.intentionrepeater.com/usage.html
+
 The Intensity determines how many 0's are in the number of iterations per second, minus one.
 So Intensity of 1 would be one iteration per second. Intensity of 7 would be 1 million iterations per second,
 depending on the hardware. If your hardware can't do 10 million iterations per second, then
