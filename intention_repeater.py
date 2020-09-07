@@ -1,5 +1,5 @@
 #Intention Repeater created by Thomas Sweet
-#Updated 9/6/2020
+#Updated 9/7/2020
 #Repeats intention a million or more times per second
 #Depending on the intensity chosen and the hardware capability.
 #Python script. Run using: python3 intention_repeater.py
@@ -18,7 +18,7 @@ def human_format(num):
         num /= 1000.0
     return '{}{}'.format('{:f}'.format(num).rstrip('0').rstrip('.'), ['', 'K', 'M', 'B', 'T', 'Q'][magnitude])
 
-print("Intention Repeater v5 software created by Thomas Sweet.\n")
+print("Intention Repeater v5.1 software created by Thomas Sweet.\n")
 print("This software comes with no guarantees or warranty of any kind.\n")
 
 args = list(sys.argv)
@@ -27,12 +27,14 @@ try:
   params = str.upper(args[1])
   gutheartmindcoherenceparam = str.upper(params[0])
   clearinterferenceparam = params[1]
-  intensityparam = params[2]
+  akashicrecordsparam = params[2]
+  intensityparam = params[3]
   filenameparam = str(args[2])
 except:
   params = ''
   gutheartmindcoherenceparam = ''
   clearinterferenceparam = ''
+  akashicrecordsparam = ''
   intensityparam = ''
   filenameparam = ''
 
@@ -42,6 +44,7 @@ intention = ''
 intentionval = ''
 coherence = ''
 clear_interference = ''
+akashic_records = ''
 
 if filenameparam == '':
     while intention == '':
@@ -61,19 +64,37 @@ if clearinterferenceparam == '':
 else:
     clear_interference = clearinterferenceparam
 
+if akashicrecordsparam == '':
+    while akashic_records != 'Y' and akashic_records != 'N':
+        akashic_records = str.upper(input("Use Akashic Records? [Very expansive, and may be hard to focus down] (Y/N): "))
+else:
+    akashic_records = akashicrecordsparam
+
+if coherence != 'Y' and coherence != 'N':
+    coherence = 'Y'
+
+if clear_interference != 'Y' and clear_interference != 'N':
+    clear_interference = 'Y'
+
+if akashic_records != 'Y' and akashic_records != 'N':
+    akashic_records = 'Y'
+
 intensity = ''
 
 #We want to cancel negative intentions. Regulate energy so that it doesn't get overpowering.
 #Choose the most effective and efficient path. And conclude with it is done on each iteration.
-process_energy_statement = 'BY GRACE. IN COOPERATION WITH FATHER GOD AND MOTHER GODDESS AND SOURCE. PURE ADAMANTINE PARTICLES OF LOVE/LIGHT. IN THE HIGHEST AND GREATEST GOOD OF ALL. REQUESTING AID FROM ALL BENEVOLENT BEINGS WHO ARE WILLING TO ASSIST. METATRON’‘S CUBE. 0010110. GREAT CENTRAL SUN. SIRIUS A. SOL. EARTH’‘S CRYSTAL GRID. CREATE STABILIZATION FIELD. CREATE ZONE OF MANIFESTATION. MANIFESTATION DIODE ARRAYS. BUBBLES. USE EVERY AVAILABLE RESOURCE (RESPECTING FREE WILL). MANIFEST ASAP AT HIGHEST DENSITY POSSIBLE INTO BEST DENSTIY FOR USER. CREATE STRUCTURE. 432HZ MANIFESTATION. CANCEL NEGATIVE INTENTIONS. PURIFY THE ENERGY. CLEAR THE BLOCKAGES. REGULATE AND BALANCE THE ENERGY. USE THE MOST EFFECTIVE PATH IN THE MOST EFFICIENT WAY. INTEGRATE THE ENERGY. PROCESS THE CHANGES. GROUNDED TO GAIA, CONNECTED TO SOURCE, INTEGRATING BOTH WITHIN THE SACRED HEART. IT IS DONE. SO SHALL IT BE. NOW RETURN A PORTION OF THE LOVE/LIGHT RECEIVED AND ACTIVATED BACK INTO THE HIGHER REALMS OF CREATION. I LOVE YOU AND THANK YOU.'
+process_energy_statement = 'INTELLIGENT INFINITY. BY GRACE. IN COOPERATION WITH FATHER GOD AND MOTHER GODDESS AND SOURCE. PURE ADAMANTINE PARTICLES OF LOVE/LIGHT. IN THE HIGHEST AND GREATEST GOOD OF ALL. REQUESTING AID FROM ALL BENEVOLENT BEINGS WHO ARE WILLING TO ASSIST. METATRON’‘S CUBE. AKASHIC RECORDS. 0010110. GREAT CENTRAL SUN. SIRIUS A. SOL. EARTH’‘S CRYSTAL GRID. CREATE STABILIZATION FIELD. CREATE ZONE OF MANIFESTATION. MANIFESTATION DIODE ARRAYS. BUBBLES. USE EVERY AVAILABLE RESOURCE (RESPECTING FREE WILL). MANIFEST ASAP AT HIGHEST DENSITY POSSIBLE INTO BEST DENSTIY FOR USER. CREATE STRUCTURE. 432HZ MANIFESTATION. CANCEL NEGATIVE INTENTIONS. PURIFY THE ENERGY. CLEAR THE BLOCKAGES. REGULATE AND BALANCE THE ENERGY. USE THE MOST EFFECTIVE PATH IN THE MOST EFFICIENT WAY. INTEGRATE THE ENERGY. PROCESS THE CHANGES. GROUNDED TO GAIA, CONNECTED TO SOURCE, INTEGRATING BOTH WITHIN THE SACRED HEART. IT IS DONE. SO SHALL IT BE. NOW RETURN A PORTION OF THE LOVE/LIGHT RECEIVED AND ACTIVATED BACK INTO THE HIGHER REALMS OF CREATION. I LOVE YOU AND THANK YOU.'
 
 intentionval += intention + ' ' + process_energy_statement
 
 if coherence == 'Y':
-    intentionval += ' GUT/HEART/MIND COHERENCE WITH REPEATER.'
+    intentionval += ' GUT/HEART/MIND COHERENCE WITH REPEATER. '
 
 if clear_interference == 'Y':
-    intentionval += ' CLEAR INTERFERENCE.'
+    intentionval += ' CLEAR INTERFERENCE. '
+
+if akashic_records == 'Y':
+    intentionval += ' FOCUS DOWN FROM AKASHIC RECORDS. '
 
 #This makes a huge difference
 intentionval += 'OM'
