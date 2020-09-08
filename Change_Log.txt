@@ -5,3 +5,4 @@ Intention Repeater Change Log (9/8/2020) by Thomas Sweet aka Anthro Teacher
 8/6/2020 v4.0 Added Heart/Mind Coherence and Clearing Energetic Interference options.
 9/6/2020 v5.0 Added Gut to Heart/Mind Coherence option. Added "OM" the highest vibration that made a big difference. Automated to allow running without user input from terminal.
 9/7/2020 v5.1 Added Akashic Records option. They provide a greater gamut of emotions such as infinitely subtle variations on Joy. However, may also be very expansive and hard to focus down.
+9/8/2020 V5.2 Changed to use ORGONE AETHER RESONATORS and ORGONE BUBBLES.
