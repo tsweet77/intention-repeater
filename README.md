@@ -1,7 +1,6 @@
 Hello All,
 
-This is the Intention Repeater program. It takes your intention, and repeats it thousands or even over a million times per second
-in computer memory. When you repeat things, it programs the Quantum Field to affect change. Computers are no different.
+This is the Intention Repeater program. It takes your intention, and repeats it up to 1+ million times per second in computer memory. It works with what's called a Servitor (programmed energy) 2000+ hours/20 years in development.
 
 I placed this into open source in order that it might be developed and improved upon.
 
@@ -26,8 +25,6 @@ My chakras are balanced.
 
 I am filled with orgasmic bliss.
 
-The Australian bushfires have just enough euphoric rains to put them out.
-
 sample_intentions.txt
 
 Picture1.jpg is perfectly and euphorically healed.
@@ -44,5 +41,7 @@ Thank You.
 Run from terminal or command line using: python3 intention_repeater.py
 
 You will need minimum version 3.5.3 of Python.
+
+Please visit the forum: https://forums.intentionrepeater.com for more information.
 
 - tsweet77
