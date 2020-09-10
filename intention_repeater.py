@@ -8,7 +8,8 @@
 #Website: https://www.intentionrepeater.com/
 #Forum: https://forums.intentionrepeater.com/
 #Licensed under GNU General Public License v3.0
-#This means you can modify, redistribute and even sell your own modified software, as long as it's open source too.
+#This means you can modify, redistribute and even sell your own modified software,
+#    as long as it's open source too and released under this same license.
 #https://choosealicense.com/licenses/gpl-3.0/
 
 import time
