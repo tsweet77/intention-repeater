@@ -4,6 +4,7 @@
 #Depending on the intensity chosen and the hardware capability.
 #Python script. Run using: python3 intention_repeater.py
 #Automated Example: python3 intention_repeater.py YYY8 "HH:MM:SS" "Intentions/Filename with Intentions"
+#Use "00:00:00" or "Forever" to run until manually stopped.
 #Intention Repeater is powered by a Servitor (20 Years / 2000+ hours in the making)
 #Website: https://www.intentionrepeater.com/
 #Forum: https://forums.intentionrepeater.com/
