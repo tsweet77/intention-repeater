@@ -1,8 +1,9 @@
 #Intention Repeater created by Thomas Sweet
 #Updated 9/11/2020 v6.0
+#Requires Python v3.5.3 or greater
 #Repeats intention a million or more times per second, depending on the intensity chosen and the hardware capability.
 #Usage instructions: https://www.intentionrepeater.com/usage.html
-#Python v3 script. Run using: python3 intention_repeater.py
+#Run using: python3 intention_repeater.py
 #Automated Example: python3 intention_repeater.py YYY8 "HH:MM:SS" "Intentions/Filename with Intentions"
 #Intention Repeater is powered by a Servitor (20 Years / 2000+ hours in the making)
 #Website: https://www.intentionrepeater.com/
