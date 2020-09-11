@@ -1,5 +1,5 @@
 #Intention Repeater created by Thomas Sweet
-#Updated 9/9/2020 v5.4
+#Updated 9/11/2020 v6.0
 #Repeats intention a million or more times per second
 #Depending on the intensity chosen and the hardware capability.
 #Python script. Run using: python3 intention_repeater.py
@@ -24,7 +24,7 @@ def human_format(num):
         num /= 1000.0
     return '{}{}'.format('{:f}'.format(num).rstrip('0').rstrip('.'), ['', 'K', 'M', 'B', 'T', 'Q'][magnitude])
 
-print("Intention Repeater v5.4 software created by Thomas Sweet.\n")
+print("Intention Repeater v6.0 software created by Thomas Sweet.\n")
 print("This software comes with no guarantees or warranty of any kind.\n")
 
 args = list(sys.argv)
@@ -35,13 +35,15 @@ try:
     clearinterferenceparam = params[1]
     akashicrecordsparam = params[2]
     intensityparam = params[3]
-    filenameparam = str(args[2])
+    runtimeparam = str(args[2])
+    filenameparam = str(args[3])
 except:
     params = ''
     gutheartmindcoherenceparam = ''
     clearinterferenceparam = ''
     akashicrecordsparam = ''
     intensityparam = ''
+    runtimeparam = ''
     filenameparam = ''
 
 list_write = []
@@ -169,6 +171,9 @@ try:
                 sys.stdout.write('  ' + time.strftime('%H:%M:%S', time.gmtime(int(num_writes/maxintensity))) + " [" + human_format(num_writes) + "] " + intention + '   \r')
                 sys.stdout.flush()
                 list_write.clear()
+                if runtimeparam == time.strftime('%H:%M:%S', time.gmtime(int(num_writes/maxintensity))):
+                    print("\nIntention repeated " + human_format(num_writes) + " times. IT IS DONE.")
+                    quit()
         if sleeptime > 0:
             time.sleep(sleeptime)
 
