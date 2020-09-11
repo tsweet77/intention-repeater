@@ -3,7 +3,7 @@
 #Repeats intention a million or more times per second
 #Depending on the intensity chosen and the hardware capability.
 #Python script. Run using: python3 intention_repeater.py
-#Automated Example: python3 intention_repeater.py YYY8 my_intents.txt
+#Automated Example: python3 intention_repeater.py YYY8 "Intentions or filename with intentions"
 #Intention Repeater is powered by a Servitor (20 Years / 2000+ hours in the making)
 #Website: https://www.intentionrepeater.com/
 #Forum: https://forums.intentionrepeater.com/
