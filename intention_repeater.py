@@ -1,7 +1,6 @@
 #Intention Repeater created by Thomas Sweet
 #Updated 9/11/2020 v6.0
-#Repeats intention a million or more times per second
-#Depending on the intensity chosen and the hardware capability.
+#Repeats intention a million or more times per second, depending on the intensity chosen and the hardware capability.
 #Usage instructions: https://www.intentionrepeater.com/usage.html
 #Python v3 script. Run using: python3 intention_repeater.py
 #Automated Example: python3 intention_repeater.py YYY8 "HH:MM:SS" "Intentions/Filename with Intentions"
@@ -9,8 +8,7 @@
 #Website: https://www.intentionrepeater.com/
 #Forum: https://forums.intentionrepeater.com/
 #Licensed under GNU General Public License v3.0
-#This means you can modify, redistribute and even sell your own modified software,
-#    as long as it's open source too and released under this same license.
+#This means you can modify, redistribute and even sell your own modified software, as long as it's open source too and released under this same license.
 #https://choosealicense.com/licenses/gpl-3.0/
 
 import time
