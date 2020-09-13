@@ -1,4 +1,4 @@
-Intention Repeater Change Log (9/9/2020) by Thomas Sweet aka Anthro Teacher
+Intention Repeater Change Log (9/13/2020) by Thomas Sweet aka Anthro Teacher
 
 4/13/2019 intentionrepeater.com domain registered.
 1/11/2020 v0.3 Created. Could only go up to 1M iterations per second and was very basic.
@@ -10,3 +10,4 @@ Intention Repeater Change Log (9/9/2020) by Thomas Sweet aka Anthro Teacher
 9/9/2020 v5.4 ALL AVAILABLE BENEFICIAL ENERGY GRIDS OF EARTH/GAIA FOCUSED THROUGH CRYSTAL GRID OF EARTH/GAIA. Added NODES AND NULLS OF EARTH/GAIA to work with the grids. Also added 963HZ GOD FREQUENCY. Added SIRIUS B the white dwarf star, since that was what I used during my development to increase my energy density. It makes the energy denser and smoother.
 9/11/2020 v6.0 Added check (not really a timer, more like a sentinel) to stop running at a certain time. Usage: python3 intention_repeater.py YYY8 "HH:MM:SS" "Intention". Use "00:00:00" if running until manually stopped.
 9/12/2020 v6.1 Added ONE INFINITE CREATOR and FULLY OPTIMIZE THE ENERGY.
+9/13/2020 v6.2 Added option for SUPERCOOLED MOST PERFECTLY BALANCED, PURIST AND MOST POWERFUL QUASAR. Stronger and smoother, but can be draining. Also added GUIDED BY HIGHER SELF to help with orchestrating it. The Quasar one is best if intending to manifest something solid, rather than using it for a person.

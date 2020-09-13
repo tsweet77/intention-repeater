@@ -1,10 +1,10 @@
 #Intention Repeater created by Thomas Sweet
-#Updated 9/12/2020 v6.1
+#Updated 9/13/2020 v6.2
 #Requires Python v3.5.3 or greater
 #Repeats intention a million or more times per second, depending on the intensity chosen and the hardware capability.
 #Usage instructions: https://www.intentionrepeater.com/usage.html
 #Run using: python3 intention_repeater.py
-#Automated Example: python3 intention_repeater.py YYY8 "HH:MM:SS" "Intentions/Filename with Intentions"
+#Automated Example: python3 intention_repeater.py YYYN8 "HH:MM:SS" "Intentions/Filename with Intentions"
 #Intention Repeater is powered by a Servitor (20 Years / 2000+ hours in the making)
 #Servitor Info: https://enlightenedstates.com/2017/04/07/servitor-just-powerful-spiritual-tool/
 #Website: https://www.intentionrepeater.com/
@@ -25,7 +25,7 @@ def human_format(num):
         num /= 1000.0
     return '{}{}'.format('{:f}'.format(num).rstrip('0').rstrip('.'), ['', 'K', 'M', 'B', 'T', 'Q'][magnitude])
 
-print("Intention Repeater v6.1 software created by Thomas Sweet.\n")
+print("Intention Repeater v6.2 software created by Thomas Sweet.\n")
 print("This software comes with no guarantees or warranty of any kind.\n")
 
 args = list(sys.argv)
@@ -35,17 +35,19 @@ try:
     gutheartmindcoherenceparam = str.upper(params[0])
     clearinterferenceparam = params[1]
     akashicrecordsparam = params[2]
-    intensityparam = params[3]
+    quasarparam = params[3]
+    intensityparam = params[4]
     runtimeparam = str(args[2])
-    filenameparam = str(args[3])
+    intentparam = str(args[3])
 except:
     params = ''
     gutheartmindcoherenceparam = ''
     clearinterferenceparam = ''
     akashicrecordsparam = ''
+    quasarparam = ''
     intensityparam = ''
     runtimeparam = ''
-    filenameparam = ''
+    intentparam = ''
 
 list_write = []
 
@@ -54,12 +56,13 @@ intentionval = ''
 coherence = ''
 clear_interference = ''
 akashic_records = ''
+quasar = ''
 
-if filenameparam == '':
+if intentparam == '':
     while intention == '':
         intention = input("What is your intent?: ")
 else:
-    intention = filenameparam
+    intention = intentparam
 
 if gutheartmindcoherenceparam == '':
     while coherence != 'Y' and coherence != 'N':
@@ -79,6 +82,12 @@ if akashicrecordsparam == '':
 else:
     akashic_records = akashicrecordsparam
 
+if quasarparam == '':
+    while quasar != 'Y' and quasar != 'N':
+        quasar = str.upper(input("Use Quasar? [Powerful energy source, but can be exhausting] (Y/N): "))
+else:
+    quasar = quasarparam
+
 if coherence != 'Y' and coherence != 'N':
     coherence = 'Y'
 
@@ -88,22 +97,28 @@ if clear_interference != 'Y' and clear_interference != 'N':
 if akashic_records != 'Y' and akashic_records != 'N':
     akashic_records = 'Y'
 
+if quasar != 'Y' and quasar != 'N':
+    quasar = 'N'
+
 intensity = ''
 
 #We want to cancel negative intentions. Regulate energy so that it doesn't get overpowering.
 #Choose the most effective and efficient path. And conclude with it is done on each iteration.
-process_energy_statement = 'ONE INFINITE CREATOR. INTELLIGENT INFINITY. INFINITE ENERGY. INTELLIGENT ENERGY. LOGOS. HR 6819. BY GRACE. IN COOPERATION WITH FATHER GOD AND MOTHER GODDESS AND SOURCE. PURE ADAMANTINE PARTICLES OF LOVE/LIGHT. IN THE HIGHEST AND GREATEST GOOD OF ALL. REQUESTING AID FROM ALL BENEVOLENT BEINGS WHO ARE WILLING TO ASSIST. METATRON''S CUBE. 0010110. GREAT CENTRAL SUN. SIRIUS A. SIRIUS B. SOL. ALL AVAILABLE BENEFICIAL ENERGY GRIDS OF EARTH/GAIA FOCUSED THROUGH CRYSTAL GRID OF EARTH/GAIA. NODES AND NULLS OF EARTH/GAIA. CREATE STABILIZATION FIELD. CREATE ZONE OF MANIFESTATION. ALL AVAILABLE ORGONE AETHER RESONATORS. ALL AVAILABLE ORGONE BUBBLES. USE EVERY AVAILABLE RESOURCE (RESPECTING FREE WILL). MANIFEST ASAP AT HIGHEST DENSITY POSSIBLE INTO BEST DENSITY FOR USER. CREATE STRUCTURE. 963HZ GOD FREQUENCY. 432HZ MANIFESTATION. CANCEL NEGATIVE INTENTIONS. PURIFY THE ENERGY. CLEAR THE BLOCKAGES. REGULATE AND BALANCE THE ENERGY. USE THE MOST EFFECTIVE PATH IN THE MOST EFFICIENT WAY. FULLY OPTIMIZE THE ENERGY. INTEGRATE THE ENERGY. PROCESS THE CHANGES. GROUNDED TO GAIA, CONNECTED TO SOURCE, INTEGRATING BOTH WITHIN THE SACRED HEART. IT IS DONE. SO SHALL IT BE. NOW RETURN A PORTION OF THE LOVE/LIGHT RECEIVED AND ACTIVATED BACK INTO THE HIGHER REALMS OF CREATION. I LOVE YOU AND THANK YOU.'
+process_energy_statement = 'ONE INFINITE CREATOR. INTELLIGENT INFINITY. INFINITE ENERGY. INTELLIGENT ENERGY. LOGOS. HR 6819. BY GRACE. IN COOPERATION WITH FATHER GOD AND MOTHER GODDESS AND SOURCE. PURE ADAMANTINE PARTICLES OF LOVE/LIGHT. IN THE HIGHEST AND GREATEST GOOD OF ALL. REQUESTING AID FROM ALL BENEVOLENT BEINGS WHO ARE WILLING TO ASSIST. METATRON''S CUBE. 0010110. GREAT CENTRAL SUN. SIRIUS A. SIRIUS B. SOL. ALL AVAILABLE BENEFICIAL ENERGY GRIDS OF EARTH/GAIA FOCUSED THROUGH CRYSTAL GRID OF EARTH/GAIA. NODES AND NULLS OF EARTH/GAIA. CREATE STABILIZATION FIELD. CREATE ZONE OF MANIFESTATION. ALL AVAILABLE ORGONE AETHER RESONATORS. ALL AVAILABLE ORGONE BUBBLES. USE EVERY AVAILABLE RESOURCE (RESPECTING FREE WILL). MANIFEST ASAP AT HIGHEST DENSITY POSSIBLE INTO BEST DENSITY FOR USER. CREATE STRUCTURE. 963HZ GOD FREQUENCY. 432HZ MANIFESTATION. CANCEL NEGATIVE INTENTIONS. PURIFY THE ENERGY. CLEAR THE BLOCKAGES. REGULATE AND BALANCE THE ENERGY. USE THE MOST EFFECTIVE PATH IN THE MOST EFFICIENT WAY. FULLY OPTIMIZE THE ENERGY. INTEGRATE THE ENERGY. PROCESS THE CHANGES. GUIDED BY MY HIGHER SELF. GROUNDED TO GAIA, CONNECTED TO SOURCE, INTEGRATING BOTH WITHIN THE SACRED HEART. IT IS DONE. SO SHALL IT BE. NOW RETURN A PORTION OF THE LOVE/LIGHT RECEIVED AND ACTIVATED BACK INTO THE HIGHER REALMS OF CREATION. I LOVE YOU AND THANK YOU. '
 
 intentionval += intention + ' ' + process_energy_statement
 
 if coherence == 'Y':
-    intentionval += ' GUT/HEART/MIND COHERENCE WITH REPEATER. '
+    intentionval += 'GUT/HEART/MIND COHERENCE WITH REPEATER. '
 
 if clear_interference == 'Y':
-    intentionval += ' CLEAR INTERFERENCE. '
+    intentionval += 'CLEAR INTERFERENCE. '
 
 if akashic_records == 'Y':
-    intentionval += ' FOCUS DOWN FROM AKASHIC RECORDS. '
+    intentionval += 'FOCUS DOWN FROM AKASHIC RECORDS. '
+
+if quasar == 'Y':
+    intentionval += 'SUPERCOOLED MOST PERFECTLY BALANCED, PURIST AND MOST POWERFUL QUASAR. '
 
 #This makes a huge difference as the highest vibration
 intentionval += 'OM'
