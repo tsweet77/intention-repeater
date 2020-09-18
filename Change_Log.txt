@@ -1,4 +1,4 @@
-Intention Repeater Change Log (9/13/2020) by Thomas Sweet aka Anthro Teacher
+Intention Repeater Change Log (9/17/2020) by Thomas Sweet aka Anthro Teacher
 
 4/13/2019 intentionrepeater.com domain registered.
 1/11/2020 v0.3 Created. Could only go up to 1M iterations per second and was very basic.
@@ -11,3 +11,4 @@ Intention Repeater Change Log (9/13/2020) by Thomas Sweet aka Anthro Teacher
 9/11/2020 v6.0 Added check (not really a timer, more like a sentinel) to stop running at a certain time. Usage: python3 intention_repeater.py YYY8 "HH:MM:SS" "Intention". Use "00:00:00" if running until manually stopped.
 9/12/2020 v6.1 Added ONE INFINITE CREATOR and FULLY OPTIMIZE THE ENERGY.
 9/13/2020 v6.2 Added option for SUPERCOOLED MOST PERFECTLY BALANCED, PURIST AND MOST POWERFUL QUASAR. Stronger and smoother, but can be draining. Also added GUIDED BY HIGHER SELF to help with orchestrating it. The Quasar one is best if intending to manifest something solid (though it can't quite do that yet), rather than using it for a person.
+9/17/2020 v6.3 CANCEL DESTRUCTIVE OR FEARFUL INTENTIONS. SEND ALL SPECIFIED INTENTIONS, AFFIRMATIONS, AND/OR DESIRED MANIFESTATIONS, OR BETTER. PLEASE HELP USER TO RAISE THEIR VIBRATION TO THE LEVEL REQUIRED TO MAKE THEIR SPECIFIED INTENTIONS, AFFIRMATIONS, AND/OR DESIRES MANIFEST. IF THE USER IS UNABLE TO ACHIEVE THE NECESSARY VIBRATION TO MANIFEST THEIR SPECIFIED INTENTIONS, AFFIRMATIONS, AND/OR DESIRES, BUT THERE ARE BEINGS WHO COULD AND THEY ARE WILLING TO ASSIST IN MANIFESTING THE SPECIFIED INTENTIONS, AFFIRMATIONS, AND/OR DESIRES, PLEASE ENLIST THEIR AID.
