@@ -1,13 +1,13 @@
 #Intention Repeater created by Thomas Sweet
-#Updated 9/17/2020 v6.3
+#Updated 9/29/2020 v6.3
 #Requires Python v3.5.3 or greater
 #Repeats intention a million or more times per second, depending on the intensity chosen and the hardware capability.
 #Usage instructions: https://www.intentionrepeater.com/usage.html
 #Run using Windows: intention_repeater.py
-#Run using Linux: python3 intention_repeater.py
-#Automated Example Linux: python3 intention_repeater.py YYYN8 "HH:MM:SS" "Intentions/Filename with Intentions"
+#Run using Linux/MacOS: python3 intention_repeater.py
+#Automated Example Linux/MacOS: python3 intention_repeater.py YYYN8 "HH:MM:SS" "Intentions/Filename with Intentions"
 #Automated Example Windows: intention_repeater.py YYYN8 "HH:MM:SS" "Intentions/Filename with Intentions"
-#Intention Repeater is powered by a Servitor (20 Years / 2000+ hours in the making)
+#Intention Repeater is powered by a Servitor (20 Years / 2000+ hours in the co-creation) black hole (HR 6819).
 #Servitor Info: https://enlightenedstates.com/2017/04/07/servitor-just-powerful-spiritual-tool/
 #Website: https://www.intentionrepeater.com/
 #Forum: https://forums.intentionrepeater.com/
