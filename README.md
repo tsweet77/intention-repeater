@@ -1,6 +1,6 @@
 Hello All,
 
-This is the Intention Repeater program. It takes your intention, and repeats it up to 1+ million times per second in computer memory. It works with what's called a Servitor (programmed energy) 2000+ hours/20 years in development.
+Introducing my free, open-source Intention Repeater. It repeats your intention 1+ Million times per second. So, if you use “I am calm” for instance, it will most likely calm you if you are open minded and energy sensitive. It works with what's called a Servitor (programmed energy) 2000+ hours/20 years in co-creation with 100’s of other entities. It can be used for affirmations, or to charge up objects. See the PDF in this project for info on how to charge up an object.
 
 I placed this into open source in order that it might be developed and improved upon.
 
@@ -11,7 +11,7 @@ So Intensity of 1 would be one iteration per second. Intensity of 7 would be 1 m
 depending on the hardware. If your hardware can't do 10 million iterations per second, then
 Intensity of 8 would be full power after one million iterations per second.
 
-Start with an Intensity of 4 or 5 and give it 15 mins at least. Or stop if it gets too much.
+Start with an Intensity of 7 and run until it feels like enough. You may want to stay under 2 hours per day at first.
 
 Sample intentions are:
 
@@ -25,9 +25,9 @@ My chakras are balanced.
 
 I am filled with orgasmic bliss.
 
-sample_intentions.txt
+You can run an intention file (with many intentions) by running the filename, such as: sample_intentions.txt
 
-Picture1.jpg is perfectly and euphorically healed.
+You can charge up an image, like so: Picture1.jpg is perfectly and euphorically healed.
 
 That last one allows images to be used just from the name of the file, if it is in the same folder as the .py file.
 Just substitute with the name of your image.
@@ -38,7 +38,8 @@ There are no guarantees. Though this program produces a strong energy field, and
 
 Thank You.
 
-Run from terminal or command line using: python3 intention_repeater.py
+On Linux/MacOS, run using: python3 intention_repeater.py
+On Windows: double click on the intention_repeater.py icon.
 
 You will need minimum version 3.5.3 of Python.
 
