@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # Intention Repeater created by Thomas Sweet
-# Updated 10/4/2020 v6.4
+# Updated 10/10/2020 v6.4
 # Requires Python v3.5.3 or greater
 # Repeats intention a million or more times per second, depending on the intensity chosen and the hardware capability.
 # Usage instructions: https://www.intentionrepeater.com/usage.html
@@ -17,9 +17,8 @@
 # This means you can modify, redistribute and even sell your own modified software, as long as it's open source too and released under this same license.
 # https://choosealicense.com/licenses/gpl-3.0/
 
-import time
+import time, sys
 from math import ceil, log10
-import sys
 
 
 def human_format(num):
@@ -38,7 +37,7 @@ def human_format(num):
         ][magnitude])
 
 
-print("Intention Repeater v6.4 software created by Thomas Sweet.\n'")
+print("Intention Repeater v6.4 software created by Thomas Sweet.\n")
 print("This software comes with no guarantees or warranty of any kind.\n")
 
 args = list(sys.argv)
