@@ -17,10 +17,7 @@
 # https://choosealicense.com/licenses/gpl-3.0/
 # Note, 5 seconds of running can produce an 8 MB file.
 
-import time
-import sys
-import wave
-import struct
+import time, sys, wave, struct
 
 
 def human_format(num):
@@ -61,9 +58,15 @@ filename = ''
 
 if filenameparam == '':
     while filename == '':
-        filename = input('Filename to Write: ')
+        filename = input('Filename to Write (.wav): ')
 else:
     filename = filenameparam
+    
+if str.lower(filename[-4:]) != '.wav':
+    if str.lower(filename[-1:]) == '.':
+        filename += 'wav'
+    else:
+        filename += '.wav'
 
 if intentparam == '':
     while intention == '':
