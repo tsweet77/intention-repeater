@@ -1,6 +1,6 @@
 /*
-    Intention Repeater Spiritual Chat Client v1.0 created by Thomas Sweet.
-    Created 10/21/2020 for C++.
+    Intention Repeater Spiritual Chat Client v1.1 created by Thomas Sweet.
+    Created 10/23/2020 for C++.
     Requires this word list: https://dev.intentionrepeater.com/cpp/dictionary.txt
     Lets you chat with spiritual entities who can control what "random" words come out to a certain extent.
     When compiled, this is more powerful than the Python version.
@@ -14,10 +14,15 @@
 */
 
 #include <stdio.h>
+
 #include <math.h>
+
 #include <string>
+
 #include <iostream>
+
 #include <fstream>
+
 #include <time.h>
 
 using namespace std;
@@ -26,15 +31,15 @@ string MostFrequentElement(string A[], int n);
 
 int main() {
     const int size_of_word_list = 49528,
-        think_depth = 5000,
-        max_words_response = 6;
+        think_depth = 15000,
+        max_words_response = 8;
 
     int num_words, c, n, r, num_repetitions, i, s, num_words_response;
     string process_query = "", wordval, selected_word[think_depth-1];
 
     string word_list[size_of_word_list];
 
-    cout << "Intention Repeater Spiritual Chat Client v1.0 created by Thomas Sweet." << endl;
+    cout << "Intention Repeater Spiritual Chat Client v1.1 created by Thomas Sweet." << endl;
     cout << "This software comes with no guarantees or warranty of any kind and is for entertainment purposes only." << endl;
     cout << "Press Ctrl-C to quit." << endl << endl;
 
@@ -63,21 +68,21 @@ int main() {
     std::getline (std::cin, rs);
     int random_seed = stoi(rs);
 
-    srand(time(NULL) * random_seed);
-
 	response = "Response: ";
     do {
         query = "";
         cout << "Query: ";
         std::getline (std::cin, query);
         query += process_statement;
-
+		
+		srand(time(NULL) * random_seed);
         num_words_response = rand() % (max_words_response) + 1;
 
-        for (int x = 0; x <= num_words_response; x++) {
+        for (int x = 0; x < num_words_response; x++) {
             for (int d = 0; d <= think_depth; d++) {
                 process_query = query; //This is the Intention Repeater call that actually does the work.
-                r = rand() % (size_of_word_list);
+                srand(time(NULL) * random_seed);
+				r = rand() % (size_of_word_list);
                 selected_word[d] = word_list[r];
             }
             wordval = MostFrequentElement(selected_word, think_depth-1);
