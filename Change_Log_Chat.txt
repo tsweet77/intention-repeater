@@ -1,0 +1,7 @@
+10/16/2020 v1.0 Intention Repeater Chat created.
+10/17/2020 v1.1 Added a percent counter for progress.
+10/17/2020 v1.2 Added display of runtime.
+
+New C++ Versions:
+10/21/2020 v1.0 Converted to C++. It runs fast enough now that there is no need to display execution time.
+10/23/2020 v1.1 Allowed randomizer function to run repeatedly, instead of just once. This allows the spiritual being that is contacted to better control it.
