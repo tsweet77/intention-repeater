@@ -2,3 +2,4 @@
 10/15/2020 v1.1 Optimized to run faster.
 10/16/2020 v1.2 Optimized further by removing benchmark loops in favor of a timer sentinel. This makes the clock more accurate and it runs faster.
 10/23/2020 v2.0 Converted to C++ which can be 2X faster and is more efficient. Will support this version from now on. Needs to be compiled with g++.
+10/24/2020 v2.1 Updated to use new PROCESS_STATEMENT used by Frank_Is_Not_My_Name on the Intention Repeater Forum.
