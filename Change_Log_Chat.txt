@@ -5,3 +5,5 @@
 New C++ Versions:
 10/21/2020 v1.0 Converted to C++. It runs fast enough now that there is no need to display execution time.
 10/23/2020 v1.1 Allowed randomizer function to run repeatedly, instead of just once. This allows the spiritual being that is contacted to better control it.
+10/24/2020 v1.2 Updated to use PROCESS_STATEMENT as provided by Frank_Is_Not_My_Name from the Intention Repeater forum.
+10/24/2020 v2.0 Updated to use a Vector instead of an Array, to allow for faster sorting. Now, THINK_DEPTH = 100000. Put defined variables at the top.
