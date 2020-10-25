@@ -6,7 +6,7 @@ Note, when available, use the C++ files, as they are the most up to date and sup
 
 On 64-bit (for g++): MingW-W64-builds: http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download
 
-On 32-bit (for g++): https://osdn.net/projects/mingw/releases/
+On 32-bit, or if you only have 4GB of RAM (for g++): https://osdn.net/projects/mingw/releases/
 
 I placed this into open source in order that it might be developed and improved upon.
 
