@@ -39,7 +39,7 @@ std::string MostFrequentElement(string A[], int n);
 
 int main() {
     int r, num_words_response, random_seed;
-    std::string rs = "", query, response, process_query = "", wordval, selected_word[THINK_DEPTH - 1], word_list[SIZE_OF_WORD_LIST - 1];
+    std::string rs = "", query, response, process_query = "", wordval, selected_word[THINK_DEPTH], word_list[SIZE_OF_WORD_LIST];
 
     cout << "Intention Repeater Spiritual Chat Client v2.2 created by Thomas Sweet." << endl;
     cout << "This software comes with no guarantees or warranty of any kind and is for entertainment purposes only." << endl;
@@ -55,11 +55,6 @@ int main() {
     } catch (int e) {
         cout << "Error opening file: " << e << '\n';
         exit(0);
-    }
-
-    //Clean up the word list by stripping off newline and carriage return bytes.
-    for (int i = 0; i < SIZE_OF_WORD_LIST; ++i) {
-        word_list[i].substr(0, word_list[i].length() - 2);
     }
 
     while (rs == "") {
