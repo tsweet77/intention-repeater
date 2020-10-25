@@ -5,6 +5,7 @@ Introducing my free, open-source Intention Repeater. It repeats your intention 1
 Note, when available, use the C++ files, as they are the most up to date and superseed the Python versions.
 
 On 64-bit (for g++): MingW-W64-builds: http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download
+
 On 32-bit (for g++): https://osdn.net/projects/mingw/releases/
 
 I placed this into open source in order that it might be developed and improved upon.
