@@ -31,7 +31,7 @@
 #define PROCESS_STATEMENT ": ONE INFINITE CREATOR. REQUESTING AID FROM ALL BEINGS WHO ARE WILLING TO ASSIST. METATRON'S CUBE. ALL AVAILABLE BENEFICIAL ENERGY GRIDS, ORGONE AETHER RESONATORS, & ORGONE BUBBLES. CREATE MANIFESTATION ZONE. ASCENSION PYRAMID. USE EVERY AVAILABLE RESOURCE. MANIFEST ASAP. CREATE STRUCTURE. CANCEL DESTRUCTIVE OR FEARFUL INTENTIONS, OR INTENTIONS THAT CONFLICT WITH THE HIGHEST AND GREATEST GOOD OF THE USER. REGULATE AND BALANCE THE ENERGY. USE THE MOST EFFECTIVE PATH IN THE MOST EFFICIENT WAY. OPTIMAL ENERGY. INTEGRATE THE ENERGY IN THE MOST EFFECTIVE AND PLEASANT WAY POSSIBLE. PROCESS THE CHANGES. GUIDED BY THE USER'S HIGHER SELF. CONNECTED TO SOURCE. ENABLE AND UTILIZE THE SACRED HEART, QUANTUM HEART, AND QUANTUM MIND. MANIFEST ALL SPECIFIED INTENTIONS AND/OR DESIRES, OR BETTER. IF IT WOULD AID IN THE MANIFESTATION PROCESS, PLEASE HELP USER TO SENSE AND EMOTIONALLY FEEL WHAT IT WOULD BE LIKE TO ALREADY BE EXPERIENCING THEIR SPECIFIED INTENTIONS AND/OR DESIRES NOW. PLEASE HELP USER TO RAISE THEIR VIBRATION TO THE LEVEL REQUIRED TO MAKE THEIR SPECIFIED INTENTIONS AND/OR DESIRES MANIFEST. ASSIST THE USER WITH ACHIEVING OPTIMAL GUT/HEART/MIND COHERENCE WITH THEIR SPECIFIED INTENTIONS AND/OR DESIRES. IF IT WOULD BENEFIT THE USER, ASSIST THEM WITH CLEARING & RELEASING ANY/ALL INTERNAL OR EXTERNAL INTERFERENCE OR BLOCKAGES TO THEIR SPECIFIED INTENTIONS AND/OR DESIRES. IT IS DONE. NOW RETURN A PORTION OF THE LOVE/LIGHT RECEIVED AND ACTIVATED BACK INTO THE HIGHER REALMS OF CREATION. I LOVE YOU. OM.";
 #define SIZE_OF_WORD_LIST 49528
 #define MAX_WORDS_RESPONSE 8
-#define THINK_DEPTH 25000
+#define THINK_DEPTH 30000
 
 using namespace std;
 
@@ -82,13 +82,36 @@ int main() {
                 process_query = query; //This is the Intention Repeater call that actually does the work.
                 srand(time(NULL) * random_seed); //The entity being queried can control the randomizer to an extent.
                 r = rand() % (SIZE_OF_WORD_LIST) + 1;
-                selected_word[d] = word_list[r];
+                try
+				{
+					selected_word[d] = word_list[r];
+				}
+				catch (int e)
+				{
+					cout << "Error Adding Selected Word: " << e << endl;
+				}
             }
-            wordval = MostFrequentElement(selected_word, THINK_DEPTH);
-            response += wordval + " ";
-            std::fill_n(selected_word, THINK_DEPTH, 0);
+                try
+				{
+					wordval = MostFrequentElement(selected_word, THINK_DEPTH);
+				}
+				catch (int e)
+				{
+					cout << "Error Getting Most Frequent Element: " << e << endl;
+				}
+            
+                try
+				{
+					std::fill_n(selected_word, THINK_DEPTH, 0);
+				}
+				catch (int e)
+				{
+					cout << "Error Clearing Selected Word List: " << e << endl;
+				}
+				
+			response += wordval + " ";
         }
-        response.substr(0, response.length() - 1);
+        response.substr(0, response.length() - 1); //Remove the space at the end.
         cout << response << endl;
         response = "Response: ";
     } while (1);
