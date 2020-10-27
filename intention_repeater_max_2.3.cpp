@@ -1,6 +1,6 @@
 /*
-    Intention Repeater MAX v2.4 created by Thomas Sweet.
-    Created 10/27/2020 for C++.
+    Intention Repeater MAX v2.3 created by Thomas Sweet.
+    Created 10/25/2020 for C++.
 	Directions to compile on Windows: https://dev.intentionrepeater.com/cpp/Win_MAX_Compile_Directions.txt
 	To compile on Linux: g++ ./intention_repeater_max.cpp -O3 -o ./intention_repeater_max
     Repeats your intention up to 30+ million times per second to make things happen.
@@ -43,7 +43,7 @@ std::string FormatTimeRun(int seconds_elapsed);
 
 #define ONE_MINUTE 60
 #define ONE_HOUR 3600
-#define PROCESS_STATEMENT " REGULATE AND INTEGRATE. IT IS DONE. OM."
+#define PROCESS_STATEMENT "|REGULATE AND INTEGRATE"
 
 class comma_numpunct: public std::numpunct < char > {
     protected: virtual char do_thousands_sep() const {
@@ -132,7 +132,7 @@ int main(int argc, char ** argv) {
     std::locale comma_locale(std::locale(), new comma_numpunct());
     std::cout.imbue(comma_locale);
 
-    cout << "Intention Repeater MAX v2.4 created by Thomas Sweet." << endl;
+    cout << "Intention Repeater MAX v2.3 created by Thomas Sweet." << endl;
     cout << "This software comes with no guarantees or warranty of any kind and is for entertainment purposes only." << endl;
     cout << "Press Ctrl-C to quit." << endl << endl;
 
@@ -162,7 +162,7 @@ int main(int argc, char ** argv) {
         }
         seconds += 1;
         runtime_formatted = FormatTimeRun(seconds);
-        std::cout << "[" + runtime_formatted + "]" << " (" << suffix(iterations) << "/" << suffix_hz(frequency_count) << "Hz): " << intention << "     \r" << std::flush;
+        std::cout << "[" + runtime_formatted + "]" << " (" << suffix(iterations) << "/" << suffix_hz(frequency_count) << "Hz): " << intention << "\r" << std::flush;
 
         if (runtime_formatted == duration) {
 			std::cout << endl << std::flush;
