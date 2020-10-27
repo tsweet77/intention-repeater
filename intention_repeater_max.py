@@ -1,14 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# Intention Repeater created by Thomas Sweet
-# Updated 10/10/2020 v1.0
+
+# Intention Repeater created by Thomas Sweet aka Anthro Teacher
+# Updated 10/16/2020 v1.2
 # Requires Python v3.5.3 or greater
-# Repeats intention a million or more times per second, depending on the intensity chosen and the hardware capability.
-# It works just like the Intention Repeater, but on max settings for ease of use.
-# Run using Windows: intention_repeater.py
-# Run using Linux/MacOS: python3 intention_repeater.py
-# Automated Example Linux/MacOS: python3 intention_repeater.py "HH:MM:SS" "Intentions/Filename with Intentions"
-# Automated Example Windows: intention_repeater.py "HH:MM:SS" "Intentions/Filename with Intentions"
+# Repeats intention up to 3+ million times per second.
+# Run using: python3 intention_repeater_max.py
+# Automated Example: python3 intention_repeater_max.py "HH:MM:SS" "Intentions/Filename with Intentions"
 # Intention Repeater is powered by a Servitor (20 Years / 2000+ hours in the making)
 # Servitor Info: https://enlightenedstates.com/2017/04/07/servitor-just-powerful-spiritual-tool/
 # Website: https://www.intentionrepeater.com/
@@ -17,7 +15,8 @@
 # This means you can modify, redistribute and even sell your own modified software, as long as it's open source too and released under this same license.
 # https://choosealicense.com/licenses/gpl-3.0/
 
-import time, sys
+import time
+import sys
 
 
 def human_format(num):
@@ -36,8 +35,8 @@ def human_format(num):
         ][magnitude])
 
 
-print("Intention Repeater Max v1.0 software created by Thomas Sweet.\n")
-print("This software comes with no guarantees or warranty of any kind.\n")
+sys.stdout.write('Intention Repeater Max v1.2 software created by Thomas Sweet.\n')
+sys.stdout.write('This software comes with no guarantees or warranty of any kind.\n')
 
 args = list(sys.argv)
 
@@ -55,7 +54,7 @@ intentionval = ''
 
 if intentparam == '':
     while intention == '':
-        intention = input('What is your intent?: ')
+        intention = input('Intention: ')
 else:
     intention = intentparam
 
@@ -80,53 +79,33 @@ list_write.clear()
 
 num_writes = 0
 
-print("Press CTRL-C to stop running.\n")
-
-# Calculate how long it takes to run the number of iterations for level of intensity chosen.
-
-start_time = float(time.time())
-for d in range(benchmark):
-    list_write.append(intentionval)
-
-# If run the last second before midnight, benchmark again.
-
-if float(time.time() - start_time) < 0:
-    list_write.clear()
-    for d in range(benchmark):
-        list_write.append(intentionval)
-
-sleeptime = 1.0 - float(time.time() - start_time)
-
-list_write.clear()
+sys.stdout.write('Press CTRL-C to stop running.\n')
 
 # We write to memory a certain number of times to repeat the intention
 
 try:
     while True:
-        for d in range(benchmark):
+        start_time = float(time.time())
+        while float(time.time()) - start_time < 1.0:
             list_write.append(intentionval)
             num_writes += 1
-            if num_writes % benchmark == 0:
-                sys.stdout.write('  ' + time.strftime('%H:%M:%S',
-                                 time.gmtime(int(num_writes
-                                 / benchmark))) + ' ['
-                                 + human_format(num_writes) + '] '
-                                 + intention + '   \r')
-                sys.stdout.flush()
-                list_write.clear()
-                if runtimeparam == time.strftime('%H:%M:%S',
-                        time.gmtime(int(num_writes / benchmark))):
-                    print("\nIntention repeated " \
-                        + human_format(num_writes) \
-                        + " times. IT IS DONE.")
-                    quit()
-        if sleeptime > 0:
-            time.sleep(sleeptime)
+        sys.stdout.write('  ' + time.strftime('%H:%M:%S',
+                         time.gmtime(int(num_writes / benchmark)))
+                         + ' [' + human_format(num_writes) + '] '
+                         + intention + '   \r')
+        sys.stdout.flush()
+        list_write.clear()
+        if runtimeparam == time.strftime('%H:%M:%S',
+                time.gmtime(int(num_writes / benchmark))):
+            sys.stdout.write('\nIntention repeated '
+                             + human_format(num_writes)
+                             + ' times. IT IS DONE.')
+            quit()
 except KeyboardInterrupt:
 
     pass
 
-print("\nIntention repeated " + human_format(num_writes) \
-    + " times. IT IS DONE.")
+sys.stdout.write('\nIntention repeated ' + human_format(num_writes)
+                 + ' times. IT IS DONE.')
 
 list_write.clear()
