@@ -162,7 +162,7 @@ int main(int argc, char ** argv) {
         }
         seconds += 1;
         runtime_formatted = FormatTimeRun(seconds);
-        std::cout << "[" + runtime_formatted + "]" << " (" << suffix(iterations) << "/" << suffix_hz(frequency_count) << "Hz): " << intention << "     \r" << std::flush;
+        std::cout << "[" + runtime_formatted + "]" << " (" << suffix(iterations) << "|" << suffix_hz(frequency_count) << "Hz): " << intention << "     \r" << std::flush;
 
         if (runtime_formatted == duration) {
 			std::cout << endl << std::flush;
