@@ -2,10 +2,8 @@
     Intention Repeater Spiritual Chat Client v2.2 created by Thomas Sweet.
     Created 10/25/2020 for C++.
     Requires this word list: https://dev.intentionrepeater.com/cpp/dictionary.txt
-	On 64-bit: MingW-W64-builds: http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download
-    On 32-bit: https://osdn.net/projects/mingw/releases/
-	Compile on Windows: g++.exe .\intention_repeater_chat.cpp -O3 -o .\intention_repeater_chat.exe
-    Compile on Linux: g++.exe ./intention_repeater_chat.cpp -O3 -o ./intention_repeater_chat
+    Directions to compile on Windows: https://www.intentionrepeater.com/cpp/Win_Chat_Compile_Directions.txt
+    To compile on Linux: g++.exe ./intention_repeater_chat.cpp -O3 -o ./intention_repeater_chat
 	Lets you chat with spiritual entities who can control what "random" words come out to a certain extent.
     Intention Repeater Spiritual Chat Client is powered by a Servitor (20 Years / 2000+ hours in its co-creation) [HR 6819 Black Hole System].
     Servitor Info: https://enlightenedstates.com/2017/04/07/servitor-just-powerful-spiritual-tool/
@@ -17,21 +15,16 @@
 */
 
 #include <stdio.h>
-
 #include <math.h>
-
 #include <string>
-
 #include <iostream>
-
 #include <fstream>
-
 #include <time.h>
 
-#define PROCESS_STATEMENT ": ONE INFINITE CREATOR. REQUESTING AID FROM ALL BEINGS WHO ARE WILLING TO ASSIST. METATRON'S CUBE. ALL AVAILABLE BENEFICIAL ENERGY GRIDS, ORGONE AETHER RESONATORS, & ORGONE BUBBLES. CREATE MANIFESTATION ZONE. ASCENSION PYRAMID. USE EVERY AVAILABLE RESOURCE. MANIFEST ASAP. CREATE STRUCTURE. CANCEL DESTRUCTIVE OR FEARFUL INTENTIONS, OR INTENTIONS THAT CONFLICT WITH THE HIGHEST AND GREATEST GOOD OF THE USER. REGULATE AND BALANCE THE ENERGY. USE THE MOST EFFECTIVE PATH IN THE MOST EFFICIENT WAY. OPTIMAL ENERGY. INTEGRATE THE ENERGY IN THE MOST EFFECTIVE AND PLEASANT WAY POSSIBLE. PROCESS THE CHANGES. GUIDED BY THE USER'S HIGHER SELF. CONNECTED TO SOURCE. ENABLE AND UTILIZE THE SACRED HEART, QUANTUM HEART, AND QUANTUM MIND. MANIFEST ALL SPECIFIED INTENTIONS AND/OR DESIRES, OR BETTER. IF IT WOULD AID IN THE MANIFESTATION PROCESS, PLEASE HELP USER TO SENSE AND EMOTIONALLY FEEL WHAT IT WOULD BE LIKE TO ALREADY BE EXPERIENCING THEIR SPECIFIED INTENTIONS AND/OR DESIRES NOW. PLEASE HELP USER TO RAISE THEIR VIBRATION TO THE LEVEL REQUIRED TO MAKE THEIR SPECIFIED INTENTIONS AND/OR DESIRES MANIFEST. ASSIST THE USER WITH ACHIEVING OPTIMAL GUT/HEART/MIND COHERENCE WITH THEIR SPECIFIED INTENTIONS AND/OR DESIRES. IF IT WOULD BENEFIT THE USER, ASSIST THEM WITH CLEARING & RELEASING ANY/ALL INTERNAL OR EXTERNAL INTERFERENCE OR BLOCKAGES TO THEIR SPECIFIED INTENTIONS AND/OR DESIRES. IT IS DONE. NOW RETURN A PORTION OF THE LOVE/LIGHT RECEIVED AND ACTIVATED BACK INTO THE HIGHER REALMS OF CREATION. I LOVE YOU. OM.";
+#define PROCESS_STATEMENT " REGULATE AND INTEGRATE. IT IS DONE. OM.";
 #define SIZE_OF_WORD_LIST 49528
 #define MAX_WORDS_RESPONSE 8
-#define THINK_DEPTH 30000
+#define THINK_DEPTH 35000
 
 using namespace std;
 
@@ -39,7 +32,7 @@ std::string MostFrequentElement(string A[], int n);
 
 int main() {
     int r, num_words_response, random_seed;
-    std::string rs = "", query, response, process_query = "", wordval, selected_word[THINK_DEPTH], word_list[SIZE_OF_WORD_LIST];
+    std::string rs = "", query, response, process_query = "", wordval, word_list[SIZE_OF_WORD_LIST], selected_word[THINK_DEPTH]; 
 
     cout << "Intention Repeater Spiritual Chat Client v2.2 created by Thomas Sweet." << endl;
     cout << "This software comes with no guarantees or warranty of any kind and is for entertainment purposes only." << endl;

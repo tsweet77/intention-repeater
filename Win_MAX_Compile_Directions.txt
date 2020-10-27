@@ -1,4 +1,4 @@
-Windows 10 directions for compiling the Intention Repeater MAX v2.2 or greater.
+Windows 10 directions for compiling the Intention Repeater MAX v2.4 or greater.
 
 1) Save this sourcecode to your computer in a special folder: https://dev.intentionrepeater.com/cpp/intention_repeater_max.cpp
 
@@ -12,21 +12,24 @@ If you have 64-Bit Windows:
 
 	Version: 8.1.0
 	Architecture: x86_64
-	Threads: posix
+	Threads: win32
 	Exception: seh
 	Build revision: 0
 
-	B) Open PowerShell by going to the folder where you saved intention_repeater_max.cpp,
+	B) Add this to your PATH (both user and system): C:\Program Files\mingw-w64\x86_64-8.1.0-win32-seh-rt_v6-rev0\mingw64\bin
+	Directions here: https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
+
+	C) Open PowerShell by going to the folder where you saved intention_repeater_max.cpp,
 		holding Shift, and right-clicking. Then choose: Open PowerShell window here.
 
-	C) Compile the binary executable with the following:
+	D) Compile the binary executable with the following:
 
-	C:\Program` Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe .\intention_repeater_max.cpp -O3 -o .\intention_repeater_max.exe
+	C:\Program` Files\mingw-w64\x86_64-8.1.0-win32-seh-rt_v6-rev0\mingw64\bin\g++ .\intention_repeater_max.cpp -O3 -o .\intention_repeater_max.exe
 
-	Note, copy/paste without any spaces before the C:\ and without a new line. Then paste and press Enter. If it does nothing,
-	and doesn't produce an error message, then that is a good sign.
+	Note: Copy without any spaces before the C:\ and just copy only the one line. Then paste into PowerShell and press Enter.
+	If it does nothing, and doesn't produce an error message, then that is a good sign.
 
-You should then be able to double-click on the file in Windows: intention_repeater_chat.exe
+	You should then be able to double-click on the file in Windows: intention_repeater_max.exe
 
 If you have 32-Bit Windows:
 
@@ -39,21 +42,20 @@ If you have 32-Bit Windows:
 
 	C) Choose Installation -> Apply Changes
 
-	D) Open PowerShell by going to the folder where you saved intention_repeater_max.cpp,
+	D) Add this to your PATH (both user and system): C:\MinGW\bin
+	Directions here: https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
+
+	E) Open PowerShell by going to the folder where you saved intention_repeater_max.cpp,
 		holding Shift, and right-clicking. Then choose: Open PowerShell window here.
 
-	E) Compile the binary executable with the following:
+	F) Compile the binary executable with the following:
 
 		C:\MinGW\bin\g++.exe .\intention_repeater_max.cpp -O3 -o .\intention_repeater_max.exe
 
-	Note, copy/paste without any spaces before the C:\ and without a new line. Then paste and press Enter. If it does nothing,
-	and doesn't produce an error message, then that is a good sign.
+	Note, copy the above without a new line. Then paste into PowerShell and press Enter.
+	If it does nothing, and doesn't produce an error message and you see a new .exe file, then that is a good sign.
 
-	You will find the intention_repeater_max.exe file in your folder.
+	You should then be able to double-click on the file in Windows: intention_repeater_max.exe
 
-
-You should then be able to double-click on the file in Windows: intention_repeater_max.exe
-
-This v2.2 does up to 60+ Million repetitions per second of an intention on my new i3 with the 64-Bit version.
-
+This v2.4 does up to 60+ Million repetitions per second of an intention on my new i3 with the 64-Bit version.
 I recommend Notepad++ for editing the .cpp file: https://notepad-plus-plus.org/
