@@ -22,7 +22,7 @@ import sys
 import wave
 import struct
 
-VOLUME_LEVEL = 1.000 # Volume level should be from 0.000 to 1.000.
+VOLUME_LEVEL = 0.950 # Volume level should be from 0.000 to 1.000. Set at 95% to prevent possible clipping.
 SAMPLING_RATE = 96000.0 #Hz.
 
 def human_format(num):
@@ -33,7 +33,7 @@ def human_format(num):
         num /= 1000.0
     return '{}{}'.format('{:f}'.format(num).rstrip('0').rstrip('.'), [
         '',
-        'K',
+        'k',
         'M',
         'B',
         'T',
@@ -75,13 +75,21 @@ duration_hours = '00'
 #Find number of seconds is in the provided duration of the output WAV file.
 
 if duration_param != 'Until Stopped':
-    duration_sec = duration_param[6:7]
-    duration_minutes = duration_param[3:4]
-    duration_hours = duration_param[0:1]
+    duration_sec = str(duration_param[6:8])
+    duration_minutes = str(duration_param[3:5])
+    duration_hours = str(duration_param[0:2])
     duration_seconds = int(duration_hours) * 3600 + int(duration_minutes) * 60 + int(duration_sec)
     total_samples = duration_seconds * SAMPLING_RATE
 else:
     total_samples = -1
+
+# print ("duration_sec: " + duration_sec);
+# print ("duration_minutes: " + duration_minutes);
+# print ("duration_hours: " + duration_hours);
+# print ("duration_seconds: " + str(duration_seconds));
+# print ("total_samples: " + str(total_samples));
+
+# quit()
     
 peak_value = 32767
 peak_value_2 = peak_value * 2
@@ -181,7 +189,7 @@ try:
         if total_samples == -1: #No duration entered in command line.
             sys.stdout.write('Status: [' + getTimeFromSeconds(num_seconds) + '] (' + human_format(sample_num) + '): ' + in_filename + ' -> ' + out_filename + '     \r' )
         else:
-            sys.stdout.write('Status: <' + str(int(sample_num/total_samples*100)) + '%> [' + getTimeFromSeconds(num_seconds) + '] (' + human_format(sample_num) + '/' + human_format(total_samples) + '): ' + in_filename + ' -> ' + out_filename + '     \r' )
+            sys.stdout.write('Status: <' + str(int(sample_num/total_samples*100)) + '%> [' + getTimeFromSeconds(num_seconds) + '] (' + human_format(sample_num) + 'B/' + human_format(total_samples) + 'B): ' + in_filename + ' -> ' + out_filename + '     \r' )
 
         sys.stdout.write('\nInput Filename: ' + in_filename + '\n')
         sys.stdout.write('Output Filename: ' + out_filename + '\n')
@@ -195,6 +203,16 @@ except KeyboardInterrupt:
 
     pass
 
-sys.stdout.write('\n' + in_filename + ' Written ' + human_format(num_writes) + ' Times To ' + out_filename + '.')
+if total_samples == -1: #No duration entered in command line.
+    sys.stdout.write('Status: [' + getTimeFromSeconds(num_seconds) + '] (' + human_format(sample_num) + '): ' + in_filename + ' -> ' + out_filename + '     \r' )
+else:
+    sys.stdout.write('Status: <' + str(int(sample_num/total_samples*100)) + '%> [' + getTimeFromSeconds(num_seconds) + '] (' + human_format(sample_num) + '/' + human_format(total_samples) + '): ' + in_filename + ' -> ' + out_filename + '     \r' )
+
+sys.stdout.write('\nInput Filename: ' + in_filename + '\n')
+sys.stdout.write('Output Filename: ' + out_filename + '\n')
+sys.stdout.write('Num Times File Repeated: ' + human_format(num_writes) + '\n')
+sys.stdout.write('Num Samples Written: ' + human_format(total_samples*2) + '\n')
+obj.close()
+sys.stdout.flush()
 
 obj.close()
