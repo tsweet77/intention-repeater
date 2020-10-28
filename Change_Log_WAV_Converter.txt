@@ -1,0 +1,2 @@
+10/26/2020 v1.0 Created.
+10/28/2020 v1.1 Converted to automate with total time of WAV file desired, rather than runtime.
