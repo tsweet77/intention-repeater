@@ -1,4 +1,0 @@
-10/11/2020 v1.0 Intention Repeater WAV File Writer created.
-10/16/2020 v2.0 Added option for amplitude (in the code) and fixed the normalize so it can actually go up to 100% and be evenly distributed. Corrected some bugs in character -> sound data translation.
-10/16/2020 v2.1 Simplified code by removing memory writes that were unneeded when writing to WAV file. Produces a slightly higher frequency.
-10/24/2020 v2.2 Updated to use PROCESS_STATEMENT as provided by Frank_Is_Not_My_Name from the Intention Repeater forum.
