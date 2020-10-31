@@ -2,6 +2,8 @@ Hello All,
 
 Introducing my free, open-source Intention Repeater. It repeats your intention 1+ Million times per second. So, if you use “I am calm” for instance, it will most likely calm you if you are open minded and energy sensitive. It works with what's called a Servitor (programmed intelligent energy) 2000+ hours/20 years in co-creation with 100’s of other entities. It can be used for affirmations, or to charge up objects. See the PDF in this project for info on how to charge up an object. The Servitor in this case is the black hole system HR 6819.
 
+You probably want intention_repeater.py
+
 Note, when available, use the C++ files, as they are the most up to date and superseed the Python versions.
 
 On 64-bit (for g++): MingW-W64-builds: http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download
