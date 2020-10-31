@@ -75,5 +75,3 @@ Intention Repeater Facebook: https://www.facebook.com/IntentionRepeater/
 Intention Repeater Academia: https://independent.academia.edu/ThomasSweet2/Papers
 
 Intention Repeater Patreon: https://www.patreon.com/AnthroTeacher
-
-- tsweet77
