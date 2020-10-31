@@ -50,15 +50,6 @@ On Linux/MacOS, run using: python3 intention_repeater.py
 On Windows: double click on the intention_repeater.py icon.
 
 You will need minimum version 3.5.3 of Python for the .py files.
-For the .cpp files, you can compile them using the free g++ compiler from MinGW.
-
-intention_repeater.py - The original Intention Repeater.
-
-intention_repeater_max_1.1.py - The Intention Repeater defaulting to MAX settings.
-
-intention_repeater_wav_2.1.py - Intention Repeater WAV File Writer that encodes your written intention into a 96kHz Mono WAV file. Running 30 seconds can produce a 1-5 minute WAV, depending on your processor.
-
-intention_repeater_chat.cpp - Requires dictionary.txt. Allows you to chat with spiritual beings. Still a work in progress.
 
 Intention Repeater Website: https://www.intentionrepeater.com
 
